@@ -23,11 +23,10 @@ jobs:
           npm ci 
           npm run test -- --coverage
 
-    tests:
-      name: Style
+    name: Style
 
-      steps:
-        - name: Fomatting
-          run: |
+    steps:
+      - name: Fomatting
+        run: |
             npm run format:check
             npm run format:write
