@@ -21,4 +21,13 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci 
-          npm run test --coverage
+          npm run test -- --coverage
+
+    tests:
+      name: Style
+
+      steps:
+        - name: Fomatting
+          run: |
+            npm run format:check
+            npm run format:write
