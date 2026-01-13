@@ -23,14 +23,12 @@ jobs:
           npm ci 
           npm run test -- --coverage
 
-    name: Style
-
   style:
     name: Style
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Fomatting
-      run: |
-            npm run format:check
-            npm run format:write
+      - name: Fomatting
+        run: |
+          npm run format:check
+          npm run format:write
