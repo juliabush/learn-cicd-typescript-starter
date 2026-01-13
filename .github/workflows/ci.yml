@@ -25,8 +25,12 @@ jobs:
 
     name: Style
 
+  style:
+    name: Style
+    runs-on: ubuntu-latest
+    
     steps:
-      - name: Fomatting
-        run: |
+    - name: Fomatting
+      run: |
             npm run format:check
             npm run format:write
